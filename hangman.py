@@ -69,6 +69,7 @@ lives = 6
 
 print('Hello, welcome to my Hangman Game!')
 print(stages[lives])
+print('You have 6 lives.')
 print("This is your word!")
 
 display = []
@@ -90,9 +91,10 @@ while end_of_game == False:
     
     if userguess not in randomword:
             lives -= 1   
-            print(f'You have {lives} lives.')
+            print(f'You guessed the letter {userguess}, which is not in the word! You loose a life.')
             print(stages[lives])
-
+            print(f'You have {lives} lives.')
+    
     print(display)
     
     if '_' not in display:
